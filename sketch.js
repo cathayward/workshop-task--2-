@@ -1,16 +1,19 @@
+let counter = 0;
+
+countInterval = setInterval(drawStar, 500);
+
 function setup() {
   createCanvas(400, 400);
   background(26, 24, 56);
-
-  setTimeout(drawStar, 2000)
-  setInterval(drawStar, 500);
 }
 
-function draw() {
-}
 
 function drawStar() {
-  drawStarShape(random(0, width), random(0, height), 5, 20, 10, 0);
+  drawStarShape(random(0, 400), random(0, 400), 5, 20, 10, 0);
+  counter++;
+  if (counter >= 100){
+    clearInterval(countInterval);
+  }
 }
 
 function drawStarShape(x, y, n, outerRadius, innerRadius, rotation) {
@@ -26,4 +29,3 @@ function drawStarShape(x, y, n, outerRadius, innerRadius, rotation) {
 
   endShape(CLOSE);
 }
-
