@@ -9,9 +9,9 @@ function setup() {
 
 
 function drawStar() {
-  drawStarShape(random(0, 400), random(0, 400), 5, 20, 10, 0);
+  drawStarShape(random(0, 400), random(0, 400), 5, 10, 5, 0);
   counter++;
-  if (counter >= 100){
+  if (counter >= 150){
     clearInterval(countInterval);
   }
 }
